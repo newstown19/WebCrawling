@@ -22,7 +22,7 @@ try:
     soup = BeautifulSoup(req , 'lxml')
     div_img = soup.find('div' ,class_ ='photo-container')
     img_src = div_img.find('img')['src']
-    print(img_src)
+    
     clss = soup.find('div' , class_= 'page_content_padding')
     with open('input.txt' , 'w') as f:
         for para in clss.find_all('p'):
